@@ -1,6 +1,6 @@
 # Micrometer OTel conventions
 
-[![Build Status](https://circleci.com/gh/marcingrzejszczak/micrometer-otel-conventions.svg?style=shield)](https://circleci.com/gh/micrometer-metrics/micrometer-otel-conventions)
+[![Build Status](https://circleci.com/gh/marcingrzejszczak/micrometer-otel-conventions.svg?style=shield)](https://circleci.com/gh/marcingrzejszczak/micrometer-otel-conventions)
 [![Apache 2.0](https://img.shields.io/github/license/marcingrzejszczak/micrometer-otel-conventions.svg)](https://www.apache.org/licenses/LICENSE-2.0)
 [![Maven Central](https://img.shields.io/maven-central/v/io.micrometer/micrometer-otel-conventions.svg)](https://search.maven.org/artifact/io.micrometer/micrometer-otel-conventions)
 [![Javadocs](https://www.javadoc.io/badge/io.micrometer/micrometer-otel-conventions.svg)](https://www.javadoc.io/doc/io.micrometer/micrometer-otel-conventions)
