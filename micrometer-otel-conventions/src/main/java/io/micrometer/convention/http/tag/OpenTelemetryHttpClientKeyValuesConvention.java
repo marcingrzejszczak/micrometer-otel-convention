@@ -13,11 +13,11 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package io.micrometer.observation.transport.http.tags.convention;
+package io.micrometer.convention.http.tag;
 
 import io.micrometer.common.KeyValue;
 import io.micrometer.observation.transport.http.HttpRequest;
-import io.micrometer.observation.transport.http.tags.HttpServerKeyValuesConvention;
+import io.micrometer.observation.transport.http.tags.HttpClientKeyValuesConvention;
 
 /**
  * Conventions for HTTP key values implemented with OpenTelemetry.
@@ -26,27 +26,12 @@ import io.micrometer.observation.transport.http.tags.HttpServerKeyValuesConventi
  * @since 1.10.0
  */
 // TODO: What to do if request is not set? UNKNOWN?
-public class OpenTelemetryHttpServerKeyValuesConvention extends OpenTelemetryHttpKeyValuesConvention
-		implements HttpServerKeyValuesConvention {
+public class OpenTelemetryHttpClientKeyValuesConvention extends OpenTelemetryHttpKeyValuesConvention
+		implements HttpClientKeyValuesConvention {
 
 	@Override
-	public KeyValue serverName(HttpRequest request) {
-		return OpenTelemetryHttpServerLowCardinalityKeyNames.SERVER_NAME.of("UNKNOWN");
-	}
-
-	@Override
-	public KeyValue route(HttpRequest request) {
-		return OpenTelemetryHttpServerLowCardinalityKeyNames.ROUTE.of("UNKNOWN");
-	}
-
-	@Override
-	public KeyValue templatedRoute(HttpRequest request) {
-		return OpenTelemetryHttpServerLowCardinalityKeyNames.TEMPLATED_ROUTE.of("UNKNOWN");
-	}
-
-	@Override
-	public KeyValue clientIp(HttpRequest request) {
-		return OpenTelemetryHttpServerLowCardinalityKeyNames.CLIENT_IP.of("UNKNOWN");
+	public KeyValue peerName(HttpRequest request) {
+		return OpenTelemetryHttpClientLowCardinalityKeyNames.PEER_NAME.of("UNKNOWN");
 	}
 
 }
